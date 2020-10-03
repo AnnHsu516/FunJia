@@ -1,0 +1,604 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+/*漢堡*/
+button.hamburger_icon{
+    display: none;
+}
+/*導覽列*/
+#t2{
+    /* border: 1px solid rgb(177, 95, 95); */
+    padding: 5px 15px;
+    border-radius: 5px 10px;
+    background-color: #439fd8;
+    font-size: 20px;
+    color: #ffffff;
+}
+nav.nav100{
+    background-color:hsla(180, 65%, 81%,0.9);/*#afeeee*/
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+nav.navfonticon{
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+nav.navfont{
+    /* border: 2px solid rgb(177, 95, 95); */
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+nav.navicon{
+    /* border: 2px solid palevioletred; */
+    width: 180px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+a.nav_icon{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0a457f;
+    transition: all 0.2s;
+}
+a.nav_icon:hover{
+    color: white;
+}
+a.logo_nav img{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 220px;
+    transition: all 0.2s;
+}
+a.logo_nav img:hover{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 223px;
+}
+a.user img,a.shopping img,a.lang img{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 18px;
+    transition: all 0.2s;
+}
+a.user img:hover,a.shopping img:hover,a.lang img:hover{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 22px;
+}
+
+
+
+/*麵包屑*/
+.breadcrumb{  
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 10px 0px 10px 100px;
+}
+.breadcrumb a{
+    /* border: 1px solid orangered; */
+    text-decoration: none;
+    color: #0a457f;
+    font-size: 14px;
+}
+
+/* 整個頁籤及內容最外層區塊 1200在這裡*/
+.tab_container{
+    /* border: 1px solid purple; */
+    width: 1140px;
+    margin: 0 auto 100px auto;
+}
+
+/* 頁籤區塊 */
+.tab_container .tab_list_block{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* 頁籤列表 */
+.tab_container div.tab_list_block ul.tab_list{
+    /* border: 1px solid purple; */
+    list-style: none;
+    display: inline-block;
+    margin: 0 ;
+    padding: 0 ;
+}
+.tab_container div.tab_list_block ul.tab_list > li{
+    display: inline-block;
+    margin:10px 25px 10px 25px;
+}
+.tab_container div.tab_list_block ul.tab_list > li > a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 20px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    color:#439fd8;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+/* 畫出底部線 */
+.tab_container div.tab_list_block ul.tab_list > li > a::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 2px);
+    height: 1px;
+    /* background-color: gray; */
+    bottom:-1px;
+    left: -1px;
+    z-index: 1;
+}
+.tab_container div.tab_list_block ul.tab_list > li > a.-on{
+    color:#1a4c85;
+}
+/* 改底線 */
+.tab_container div.tab_list_block ul.tab_list > li > a.-on::after{
+    background-color: #1a4c85;
+    margin-bottom: 3px;
+    width: 100%;
+    left: 0;
+}
+/* 頁籤內容區塊 */
+.tab_container div.tab_contents{
+    width: 100%;
+}
+.tab_container div.tab_contents div.tab{
+    padding: 10px;
+    display: none;
+}
+.tab_container div.tab_contents div.tab.-on{
+    display: block;
+}
+
+
+
+/*聯絡我們*/
+.form_all{
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.text{
+    /* border: 1px solid orange; */
+    flex: 50%;
+    padding: 10px;
+}
+.text > h3{
+    /* border: 1px solid green; */
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0a457f;
+}
+.text > p{
+    /* border: 1px solid blue; */
+    text-align: center;
+    color: black;
+    font-weight: bold;
+} 
+.text > p > a{
+    /* border: 1px solid purple; */
+    text-decoration: none;
+    color: indianred;
+    font-weight: bolder;
+    text-shadow: 1px 1px 8px white ;
+}
+
+/*表單*/
+.form{
+    /* border: 1px solid blsue; */
+    flex: 50%;
+    margin: 30px 0px 30px 0px;
+    padding: 40px;
+}
+.form > p{
+    /* border: 1px solid green; */
+    margin: 15px 0px 0px 0px;
+}
+.form > input{
+    border: 1px solid gray;
+    height: 30px;
+    width: 100%;
+}
+.content{
+    /* border: 1px solid purple; */
+    height: 100px;
+    width: 100%;
+}
+.form_btn{
+    /* border: 1px solid orange; */
+    text-align: center;
+}
+.mg_btn{
+    margin: 20px 0px;
+    padding: 5px 50px;
+    background-color: #439fd8;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 5px gray;
+    transition: all 0.3s;
+}
+.mg_btn:hover{
+    color: white;
+    background-color: #0a457f;
+    box-shadow: 1px 1px 5px gray;
+}
+
+
+
+/*常見問題*/
+.faqs_all{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 0 auto 100px auto;
+}
+.faq_title{
+    border-bottom: 1px solid gray;
+    border-radius: 5px 5px 0px 0px;
+}
+.faq_title > p{
+    display: inline-block;
+    position: relative;
+    padding-left: 0px;
+    margin-left: 15px;
+    color: #0a457f;
+    border-bottom: 6px solid #0a457f;
+    margin-bottom: -3px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.faq_list{
+    background-color: rgb(236, 236, 236);
+    padding: 20px;
+}
+.op_top{
+  background-color: white;
+  border: 1px solid #0a457f;
+  border-radius: 10px ;
+  margin:  20px 0px 0px 0px;
+  width: 1005;
+  padding: 0px 20px;
+  position: relative;
+  transition: all 0.3s;
+}
+.op_top:hover{
+    box-shadow: 1px 1px 4px gray;
+  }
+.op_top::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 8px;
+    height: 100%;
+    background: #0a457f;
+    border: #0a457f;
+    border-radius: 6px;
+  }
+
+.op_top p span{
+    color: #439fd8;
+    font-weight: bold;
+  }
+
+.op_top p{
+    width: 100%;
+    color: #0a457f;
+    font-weight: bold;
+  }
+
+.op_don{
+    border: 1px solid gray;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/*背景*/
+.shan{
+    position: fixed;
+    bottom: -56px;
+    left: 0;
+    z-index: -3;
+    opacity: .7;
+}
+.cloud{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2; 
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    /* 整個頁籤及內容最外層區塊 1200在這裡*/
+    .tab_container{
+        /* border: 1px solid purple; */
+        width: 100%;
+        margin: 0 auto 100px auto;
+    }
+    /*聯絡我們*/
+    .form_all{
+        /* border: 1px solid red; */
+        flex:100%;
+        flex-wrap: wrap;
+    }
+    .text{
+        /* border: 1px solid orange; */
+        flex:40%;
+    }
+    /*表單*/
+    .form{
+        /* border: 1px solid blue; */
+        flex: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    /* 整個頁籤及內容最外層區塊 1200在這裡*/
+    .tab_container{
+        /* border: 1px solid purple; */
+        width: 100%;
+        margin: 0 auto 100px auto;
+    }
+    /*聯絡我們*/
+    .form_all{
+        /* border: 1px solid red; */
+        flex:100%;
+        flex-wrap: wrap;
+    }
+    .text{
+        /* border: 1px solid orange; */
+        flex:40%;
+    }
+    /*表單*/
+    .form{
+        /* border: 1px solid blue; */
+        flex: 60%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+
+
+
+    /* 整個頁籤及內容最外層區塊 1200在這裡*/
+    .tab_container{
+        /* border: 1px solid purple; */
+        width: 100%;
+        margin: 0 auto 100px auto;
+    }
+    /*聯絡我們*/
+    .form_all{
+        /* border: 1px solid red; */
+        flex:100%;
+        flex-wrap: wrap;
+    }
+    .text{
+        /* border: 1px solid orange; */
+        flex:100%;
+    }
+    /*表單*/
+    .form{
+        /* border: 1px solid blue; */
+        flex: 100%;
+    }
+}
+
+@media screen and (max-width: 575px){
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+
+
+
+    /* 整個頁籤及內容最外層區塊 1200在這裡*/
+    .tab_container{
+        /* border: 1px solid purple; */
+        width: 100%;
+        margin: 0 auto 100px auto;
+    }
+    /*聯絡我們*/
+    .form_all{
+        /* border: 1px solid red; */
+        flex:100%;
+        flex-wrap: wrap;
+    }
+    .text{
+        /* border: 1px solid orange; */
+        flex:100%;
+    }
+    /*表單*/
+    .form{
+        /* border: 1px solid blue; */
+        flex: 100%;
+    }
+}
+
+

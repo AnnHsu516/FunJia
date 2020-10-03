@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'NotoSerifTC';
+    src: url('../font/NotoSerifTC-Light.otf');
+  }
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Medium.ttf');
+  }
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('../font/Caveat-Regular.ttf');
+  }
+
+
+*{
+    font-family:'NotoSerifTC','Roboto' ;
+  }
+
+.banner_shadow p{
+    font-family:'Caveat';
+}
+.slogan p{
+    font-family:'Caveat';
+}

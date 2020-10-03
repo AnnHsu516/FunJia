@@ -1,0 +1,185 @@
+/*這裡是footer*/
+.footer{
+    width: 100%;
+}
+/*背景*/
+.footer .bgimg_footer{
+    width: 100%;
+    /* height: 130px; */
+    /* border: 1px solid green; */
+    background-color: rgb(175, 238, 238);
+}
+/*海浪區*/
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
+}  
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
+}
+.slider {
+    /* border:1px solid red ; */
+    height: 100px;
+    margin: 0px auto 0px auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.slider::before, .slider::after {
+    /* border:1px solid green ; */
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+.slider::after {
+    /* border:1px solid blue; */
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+.slider::before {
+    /* border:1px solid gray; */
+    left: 0;
+    top: 0;
+}
+.slider .slide-track {
+    /* border:1px solid purple; */
+    -webkit-animation: scroll 43s linear infinite;
+    animation: scroll 43s linear infinite;
+    display: -webkit-box;
+    display: flex;
+    width: calc(250px * 14);
+}
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+.slider .slide img {
+    height: 100px;
+    width: 250px;
+}
+
+
+
+/*flex-icon區*/
+.footer .icon_footer{
+    /* border: 1px solid rgb(31, 31, 226); */
+    display: inline-block;
+    margin: 0px auto 0px auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(-40px);
+}
+.icon_footer .phone_mail{
+    /* border: 1px solid orangered; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.icon_footer .fb_ig{
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+/*電話*/
+.icon_footer .phone_footer{
+    /* border: 1px solid purple; */
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.icon_footer .phone_footer img{
+    width: 27px;/*與span同層，不能100%*/
+}
+.icon_footer .phone_footer span{
+    font-size: 13px;
+    color:#0a457f;
+    padding-left: 5px;
+}
+/*mail*/
+.icon_footer .email_footer{
+    /* border: 1px solid purple; */
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.icon_footer .email_footer img{
+    width: 27px;/*與span同層，不能100%*/
+}
+.icon_footer .email_footer span{
+    font-size: 13px;
+    color:#0a457f;
+    padding-left: 5px;
+}
+/*rudder*/
+.icon_footer .rudder_footer{
+    /* border: 1px solid black; */
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.icon_footer .rudder_footer img{
+    width: 30px;/*與span同層，不能100%*/
+}
+.icon_footer .rudder_footer span{
+    font-size: 13px;
+    color:#0a457f;
+    padding-left: 5px;
+}
+/*logo*/
+.icon_footer .logo_footer{
+    display: inline-block;
+    width: 75px;/*icon改大小*/
+}
+.icon_footer .logo_footer img{
+    width: 100%;
+}
+/*FB*/
+.icon_footer .fb_footer{
+    display: inline-block;
+    width: 28px;/*icon改大小*/
+    margin: 0px 10px;
+}
+.icon_footer .fb_footer img{
+    width: 100%;
+}
+/*IG*/
+.icon_footer .ig_footer{
+    display: inline-block;
+    width: 28px;/*icon改大小*/
+}
+.icon_footer .ig_footer img{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 767px){
+    .footer .icon_footer{
+        /* border: 1px solid green; */
+        width: 95%;
+    }   
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunJia 購物車</title>
+    <link rel="stylesheet" href="./css/pay.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="shortcut icon" href="./img/funjiaico.ico">
+    <link rel="stylesheet" href="./css/font.css">
+    <script src="./vendors/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="header">
+    </div>
+<!--導覽列-->
+<nav class="nav100">
+    <nav class="navfonticon">
+        <div class="mobile_block">
+            <a href="./index.html" class="logo_nav">
+                <img src="./img/logo_nav.png">
+            </a>
+            <button type="button" class="hamburger_icon">
+                <span class="-hr -top"></span>
+                <span class="-hr -middle"></span>
+                <span class="-hr -bottom"></span>
+            </button>
+        </div>
+        <nav class="navfont">
+            <a href="./product.html" class="nav_icon" id="t1">行程選擇</a>
+                <a href="./faqs.html" class="nav_icon" id="t2">聯繫我們</a>
+                <a href="./about_us.html" class="nav_icon" id="t3">關於我們</a>
+                <a href="./mybag.html" class="nav_icon" id="t4">我的背包</a>
+        </nav>
+        <nav class="navicon">          
+            <a href="./sign_in.html" class="user">
+                <img src="./img/user_nav.png">
+            </a>
+
+            <a href="./pay.html" class="shopping">
+                <img src="./img/shopping_nav.png">
+            </a>
+
+            <a href="#" class="lang">
+                <img src="./img/global_nav.png">
+            </a>
+        </nav>
+    </nav>
+</nav>
+
+    <div class="main">
+        <!--全欄-->
+        <div class="all_flex">
+            <!--左欄100px-->
+            <div class="aside">
+                <a href="#"><span>購物車</span></a>
+                <a href="./mybag.html">相片下載</a>
+                <a href="#">購買紀錄</a>
+                <a href="#">我的資料</a>
+            </div>
+            <!--右欄-->
+            <div class="pay_right" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                <div class="title_font">
+                    <h4>購物車</h4>
+                </div>
+                    <div class="pay_flex"><!--內容-->
+                        <div class="item1">
+                            <h3>方案選擇</h3>
+                            <div class="item1_text">
+                                <p class="text_f">SUP立槳最美海岸線</p>
+                                <a href="#">✘</a>
+                                <p class="text_hr">行程總長：4小時</p>
+
+                                <div class="date">
+                                    <p>行程日期</p>
+                                    <input type="date" name="date">
+                                </div>
+                                <div class="time">
+                                    <p>時間</p>
+                                    <select name="select_time">
+                                        <option value="1">04:00</option>
+                                        <option value="2">13:00</option>
+                                    </select>
+                                </div>
+                                <div class="number">
+                                    <p>數量</p>
+                                    <input type="number" name="number" min="0" max="30">
+                                </div>
+                                <textarea class="content" name="content">留言給響導</textarea>
+
+                                <p class="text_nt">TWD1399</p>
+                            </div>
+                        </div>
+                        <div class="item2_pay">
+
+                            <div class="pay_div1">
+                                <p>使用折扣碼嗎?</p>
+                                <label><input type="radio" name="discount"> YES</label>
+                                <input type="text" name="discount_text" placeholder="折扣碼">
+                                <div class="pay_input">
+                                    <label><input type="radio" name="discount"> NO</label>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="pay_div2">
+                                <p>選擇付款方式</p>
+                                <label><input  type="radio" name="discount2"> 信用卡</label>
+                                <label><input type="radio" name="discount2"> ATM/匯款</label>
+                                <label><input type="radio" name="discount2"> 網路銀行</label>
+                            </div>
+                            <hr>
+
+                            <div class="pay_div3">
+                                <p>代表旅客資訊</p>
+                                <div class="user_im">
+                                    <div class="user_imname">
+                                        <input type="text" name="user_im" placeholder="姓">
+                                        <input type="text" name="user_im" placeholder="名">
+                                    </div>
+                                    <input class="phone" type="text" name="user_im" placeholder="連絡電話">
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="pay_div4">
+                                <p>支付金額</p>
+                                <p class="right">TWD 1399</p>
+                            </div>
+
+                            <div class="pay_div5">
+                                <label><input type="checkbox" name="checkbox">依中華民國法律規定，參加旅遊需簽訂旅遊定型化契約，以保障旅客權益。打勾即表示您以確認訂單無誤、同意定型化契約以及我們的隱私權政策。</label>
+                            </div>
+
+                            <div class="btn_pay">
+                                <button class="btn_p">確認付款</button>
+                            </div>
+                            <hr>
+
+                            <p>我們將於付款完成後，儘速回覆您的預訂結果。當您按下確認付款時，表示您已同意FunJia服務的隱私權政策及使用者條款。</p>
+                        </div>
+                    </div>
+                <div class="other"> <!--你可能會喜歡-->
+                    <h3>猜您會喜歡</h3>
+                    
+                    <section class="testimonials">
+                        <div id="customers-testimonials" class="owl-carousel">
+                    
+                            <div class="item">
+                                <div class="recent_activitie_item1"><!--近期活動第一個朔溪-->
+                                    <a href="./shopping.html" class="imghome1">
+                                        <img src="./img/imghome1.jpg">
+                                        <h3>朔溪 黃金峽谷</h3>
+                                        <div class="iconstar1"><img src="./img/starone.png"></div>
+                                        <span class="like1">5.0</span>
+                                        <span class="discount1">20%Off</span>
+                                        <p>TWD1399</p>
+                                    </a>
+                                </div>
+                            </div>
+                    
+                            <div class="item">
+                                <div class="recent_activitie_item2"><!--近期活動第二個泛舟-->
+                                    <a href="./shopping.html" class="imghome6">
+                                        <img src="./img/imghome6.jpg">
+                                        <h3>泛舟 勇闖秀姑巒溪激流</h3>
+                                        <div class="iconstar2"><img src="./img/starone.png"></div>
+                                        <span class="like2">5.0</span>
+                                        <span class="discount2">20%Off</span>
+                                        <p>TWD1399</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <div class="recent_activitie_item3"><!-- 近期活動第三個衝浪 -->
+                                    <a href="./shopping.html" class="imghome4">
+                                        <img src="./img/imghome4.jpg">
+                                        <h3>衝浪 讓你成功追浪</h3>
+                                        <div class="iconstar3"><img src="./img/starone.png"></div>
+                                        <span class="like3">4.0</span>四星
+                                        <span class="discount3">20%Off</span>
+                                        <p>TWD1399</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <div class="recent_activitie_item1"><!--近期活動第一個朔溪-->
+                                    <a href="./shopping.html" class="imghome1">
+                                        <img src="./img/imghome1.jpg">
+                                        <h3>朔溪 黃金峽谷</h3>
+                                        <div class="iconstar1"><img src="./img/starone.png"></div>
+                                        <span class="like1">5.0</span>
+                                        <span class="discount1">20%Off</span>
+                                        <p>TWD1399</p>
+                                    </a>
+                                </div>
+                            </div>
+                    
+                            <div class="item">
+                                <div class="recent_activitie_item2"><!--近期活動第二個泛舟-->
+                                    <a href="./shopping.html" class="imghome6">
+                                        <img src="./img/imghome6.jpg">
+                                        <h3>泛舟 勇闖秀姑巒溪激流</h3>
+                                        <div class="iconstar2"><img src="./img/starone.png"></div>
+                                        <span class="like2">5.0</span>
+                                        <span class="discount2">20%Off</span>
+                                        <p>TWD1399</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <div class="recent_activitie_item3"><!-- 近期活動第三個衝浪 -->
+                                    <a href="./shopping.html" class="imghome4">
+                                        <img src="./img/imghome4.jpg">
+                                        <h3>衝浪 讓你成功追浪</h3>
+                                        <div class="iconstar3"><img src="./img/starone.png"></div>
+                                        <span class="like3">4.0</span>四星
+                                        <span class="discount3">20%Off</span>
+                                        <p>TWD1399</p>
+                                    </a>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </section>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    </div>
+
+<!--footer-->
+    <footer class="footer">
+        <!--4個icon(聯絡資訊) + 安心、專業、熱忱三個icon-->
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+            </div>
+        </div>
+        <div class="bgimg_footer">
+            <div class="icon_footer"><!--這裡是flex-->
+                <div class="phone_mail">
+                    <div class="phone_footer">
+                        <img src="./img/phone_footer.png">
+                        <span>(03)1235678</span>
+                    </div>
+                    <div class="email_footer">
+                        <img src="./img/email_footer.png">
+                        <span>123@gmail.com</span>
+                    </div>
+                    <div class="rudder_footer">
+                        <img src="./img/rudder_footer.png">
+                        <span>桃園市平鎮區中央路300號</span>
+                    </div>
+                </div>
+
+                <div class="fb_ig">
+                <div class="logo_footer"><img src="./img/logo_nofont.png"></div>
+                <div class="fb_footer"><img src="./img/fb_footer.png"></div>
+                <div class="ig_footer"><img src="./img/ig_footer.png"></div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <img class="cloud" src="./img/cloud.png">
+    <img class="shan" src="./img/shan.png">
+    <script src="./js/pay.js"></script>
+    <script src="./js/hanburger.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

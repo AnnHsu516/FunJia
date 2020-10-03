@@ -1,0 +1,876 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+/*漢堡*/
+button.hamburger_icon{
+    display: none;
+}
+/*導覽列*/
+#t4{
+    /* border: 1px solid rgb(177, 95, 95); */
+    padding: 5px 15px;
+    border-radius: 5px 10px;
+    background-color: #439fd8;
+    font-size: 20px;
+    color: #ffffff;
+}
+nav.nav100{
+    background-color:hsla(180, 65%, 81%,0.9);/*#afeeee*/
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+nav.navfonticon{
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+nav.navfont{
+    /* border: 2px solid rgb(177, 95, 95); */
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+nav.navicon{
+    /* border: 2px solid palevioletred; */
+    width: 180px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+a.nav_icon{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0a457f;
+    transition: all 0.2s;
+}
+a.nav_icon:hover{
+    color: white;
+}
+a.logo_nav img{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 220px;
+    transition: all 0.2s;
+}
+a.logo_nav img:hover{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 223px;
+}
+a.user img,a.shopping img,a.lang img{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 18px;
+    transition: all 0.2s;
+}
+a.user img:hover,a.shopping img:hover,a.lang img:hover{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 22px;
+}
+
+/* 內容 */
+/*全欄*/
+.all_flex{
+    /* border: 1px solid rebeccapurple; */
+    width: 1140px;
+    margin: 100px auto 100px auto;
+    display: flex;
+}
+/*左欄*/
+.aside{
+    /* border: 1px solid orangered; */
+    position: sticky;
+    top: 71px;
+    width: 100px;
+    height: 450px;
+}
+.aside a{
+    border: 2px solid #439fd8;
+    display: block;
+    padding: 25px 0px 5px 0px;
+    text-decoration: none;
+    color: #439fd8;
+    font-size: 18px;
+    font-weight: bold;
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+    text-shadow: 2px 2px 10px white;
+    writing-mode: vertical-lr;/*文字垂直*/
+    margin: 0 auto;
+    transition: all 0.2s;
+}
+.aside a:hover{
+    border: 2px solid #0a457f;
+    color: #0a457f;
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+}
+
+.aside a span{
+    border-radius: 5px;
+    background-color: #0a457f;
+    padding: 5px 0px 5px 0px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: none;
+    margin: 0px auto;
+}
+/*右欄*/
+.mybag_right{
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 1040px;
+}
+.p1{
+    /* border: 1px solid goldenrod; */
+    margin: 10px 0px;
+    padding: 2px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.mybag_select{
+    /* border: 1px solid blue; */
+    padding: 0px 15px;
+    background-color: #EEE;
+}
+.p3{   
+    padding:5px 0px 5px 0px;
+}
+.mybag_select1 , .mybag_select2 {
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 0px;
+    font-size: 15px;
+}
+.mybag_select1 p, .mybag_select2 p{
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 0px;
+    font-size: 15px;
+}
+.p2{
+    /* border: 1px solid goldenrod; */
+    margin-bottom: 0px;
+    padding: 2px 10px;
+}
+.mybag_list{
+    background-color: rgb(236, 236, 236);
+    padding: 20px;
+}
+.op_top{
+    background-color: white;
+    border: 1px solid #0a457f;
+    border-radius: 10px ;
+    margin:  30px 0px 0px 0px;
+    width: 100%;
+    padding: 5px 20px;
+    position: relative;
+    transition: all 0.2s;
+}
+.op_top:hover{
+    box-shadow: 0px 2px 3px gray;
+}
+.op_top span{
+    margin-right: 30px;
+}
+.op_top p{
+    font-size: 20px;
+    width: 100%;
+    margin: 8px 0px;
+    font-weight: bold;
+}
+.op_top::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 8px;
+    height: 100%;
+    background: #0a457f;
+    border: #0a457f;
+    border-radius: 6px;
+}
+.op_top span{
+    display: inline-block;
+    color: #0a457f;
+}
+.op_top button{
+    display: inline-block;
+    color: #0a457f;
+}
+.op_top p{
+    color: #0a457f;
+}
+.show{
+    background-color: #4d94db;
+    padding: 1px 10px 2px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color:white !important;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px gray;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: all 0.2s;
+}
+.show:hover{
+    background-color: #0a457f;
+    font-size: 18px;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px gray;
+}
+.show2{
+    background-color: #4d94db;
+    padding: 1px 10px 2px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color:white !important;
+    text-shadow: 1px 1px 1px black;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: all 0.2s;
+}
+.show2:hover{
+    background-color: #0a457f;
+    font-size: 18px;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 2px gray;
+}
+.op_don{
+    border: 1px solid gray;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px 5px 0px 0px;
+}
+.dload{/*下載*/
+    background-color: #4d94db;
+    padding: 3px 28px;
+    border-radius: 5px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 2px gray;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.dload:hover{
+    background-color: #0a457f;
+    font-size: 18px;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 2px gray;
+}
+
+
+.alldload{/*全部下載*/
+    background-color: #4d94db;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 2px gray;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.alldload:hover{
+    background-color: #0a457f;
+    font-size: 18px;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 2px gray;
+}
+
+
+/* LightBox Style */
+/* -------- the object that calls the function  */
+.lightbox{
+    cursor: pointer;
+}
+/* -------- the LightBox  */
+#AI_lightbox{
+    /* border: 1px solid orange; */
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    z-index: 100;
+    opacity: 0;
+    display: none;
+}
+
+#AI_lightbox span{
+    /* border: 1px solid red; */
+    position: absolute;
+    cursor: pointer;
+    z-index: 110;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+#AI_lightbox span i{
+    /* border: 1px solid blue; */
+    display:none;
+}
+#AI_lightbox .close{
+    /* border: 1px solid yellow; */
+    padding: 15px;
+    top:10px;
+    right:30px;
+    background-image: url(../img/close.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+#AI_lightbox .close:hover{
+    opacity: 1;
+}
+#AI_lightbox .next{ /*右*/
+    /* border: 1px solid purple; */
+    padding: 15px;
+    top:50%;
+    right:20px;
+    transform: translate(0px, -50%);
+    background-image: url(../img/next.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+#AI_lightbox .next:hover{ /*右*/
+    opacity: 1;
+}
+#AI_lightbox .prev{ /*左*/
+    /* border: 1px solid green; */
+    padding: 15px;
+    top:50%;
+    left:15px;
+    transform: translate(0px, -50%);
+    background-image: url(../img/back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+#AI_lightbox .prev:hover{ /*左*/
+    opacity: 1;
+}
+  /* -------- the image in LightBox */
+#AI_lightbox img{
+    /* -------- If you like the edges around the picture just change a max-width and max-height to 90vw */
+    max-width: 100vw;
+    max-height: 100vh;
+    position:absolute;
+    /* -------- Set image to center */
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);
+  }
+
+/* -------- here is just style for display preloader */
+.AI_lightbox_grid{
+    /* border: 1px solid black; */
+    margin: 30px auto;
+    max-width: 1140px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.AI_lightbox_grid .block{
+    /* border: 1px solid red; */
+    margin: 5px;
+    width: 350px;
+    position: relative;
+}
+.block{
+    /* border: 1px solid blue; */
+    display: inline-block;
+    flex: 0 1 32%;/*是否分配空位,是否伸縮，圖片比*/
+    transition: all 0.5s;
+}
+.block:hover{
+    border: 1px solid #439fd8;
+}
+.ipt{
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+img.lightbox{
+    width: 100% ;
+    vertical-align: bottom;
+    /* border: 1px solid red; */
+}
+
+.shan{
+    position: fixed;
+    bottom: -56px;
+    left: 0;
+    z-index: -3;
+    opacity: .7;
+}
+.cloud{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2; 
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    /* 內容 */
+    .breadcrumb{  /*麵包屑*/
+        /* border: 1px solid red; */
+        width: 100%;
+        margin:  30px auto 50px auto;
+    }
+    /*全欄flex*/
+    .all_flex{
+        /* border: 1px solid rebeccapurple; */
+        width: 100%;
+        margin: 100px auto 100px auto;
+        display: flex;
+        flex-flow: column;
+    }
+    /*左欄100px*/
+    .aside{
+        /* border: 1px solid orangered; */
+        position: sticky;
+        top: 71px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
+        z-index: 2;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .aside a{
+        border: 2px solid #439fd8;
+        display: block;
+        padding:0px 0px 3px 0px;
+        text-decoration: none;
+        color: #439fd8;
+        font-size: 16px;
+        font-weight: bold;
+        border-top:none ;
+        border-left: none;
+        border-right: none;
+        text-shadow: 2px 2px 10px white;
+        writing-mode: horizontal-tb;/*文字水平*/
+    }
+    .aside a span{
+        border-radius: 5px;
+        background-color: #0a457f;
+        padding: 0px 5px 0px 5px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: normal;
+        text-shadow: none;
+        margin: 0px auto;
+    }
+    /*右欄*/
+    .mybag_right{
+        /* border: 1px solid red; */
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .breadcrumb{  /*麵包屑*/
+        /* border: 1px solid red; */
+        width: 100%;
+        margin:  30px auto 50px auto;
+    }
+    
+    /*全欄flex*/
+    .all_flex{
+        /* border: 1px solid rebeccapurple; */
+        width: 100%;
+        margin: 100px auto 100px auto;
+        display: flex;
+        flex-flow: column;
+    }
+    /*左欄100px*/
+    .aside{
+        /* border: 1px solid orangered; */
+        position: sticky;
+        top: 71px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
+        z-index: 2;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .aside a{
+        border: 2px solid #439fd8;
+        display: block;
+        padding: 10px 0px 3px 0px;
+        text-decoration: none;
+        color: #439fd8;
+        font-size: 16px;
+        font-weight: bold;
+        border-top:none ;
+        border-left: none;
+        border-right: none;
+        text-shadow: 2px 2px 10px white;
+        writing-mode: horizontal-tb;/*文字水平*/
+    }
+    .aside a span{
+        border-radius: 5px;
+        background-color: #0a457f;
+        padding: 0px 5px 0px 5px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: normal;
+        text-shadow: none;
+        margin: 0px auto;
+    }
+    /*右欄*/
+    .mybag_right{
+        /* border: 1px solid red; */
+        width: 95%;
+        margin: 0 auto;
+    }
+    .block{
+        /* border: 1px solid blue; */
+        display: inline-block;
+        flex: 0 1 31%;/*是否分配空位,是否伸縮，圖片比*/
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+    .breadcrumb{  /*麵包屑*/
+        /* border: 1px solid red; */
+        width: 100%;
+        margin:  30px auto 50px auto;
+    }
+    
+    /*全欄flex*/
+    .all_flex{
+        /* border: 1px solid rebeccapurple; */
+        width: 100%;
+        margin: 100px auto 100px auto;
+        display: flex;
+        flex-flow: column;
+    }
+    /*左欄100px*/
+    .aside{
+        /* border: 1px solid orangered; */
+        position: sticky;
+        top: 65px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
+        z-index: 2;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .aside a{
+        border: 2px solid #439fd8;
+        display: block;
+        padding: 10px 0px 3px 0px;
+        text-decoration: none;
+        color: #439fd8;
+        font-size: 16px;
+        font-weight: bold;
+        border-top:none ;
+        border-left: none;
+        border-right: none;
+        text-shadow: 2px 2px 10px white;
+        writing-mode: horizontal-tb;/*文字水平*/
+    }
+    .aside a span{
+        border-radius: 5px;
+        background-color: #0a457f;
+        padding: 0px 5px 0px 5px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: normal;
+        text-shadow: none;
+        margin: 0px auto;
+    }
+    /*右欄*/
+    .mybag_right{
+        /* border: 1px solid red; */
+        width: 95%;
+        margin: 0 auto;
+    }
+    .block{
+        /* border: 1px solid blue; */
+        display: inline-block;
+        flex: 0 1 31%;/*是否分配空位,是否伸縮，圖片比*/
+    }
+}
+@media screen and (max-width: 575px){
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+    .breadcrumb{  /*麵包屑*/
+        /* border: 1px solid red; */
+        width: 100%;
+        margin:  30px auto 50px auto;
+    }
+    
+    /*全欄flex*/
+    .all_flex{
+        /* border: 1px solid rebeccapurple; */
+        width: 100%;
+        margin: 100px auto 100px auto;
+        display: flex;
+        flex-flow: column;
+    }
+    /*左欄100px*/
+    .aside{
+        /* border: 1px solid orangered; */
+        position: sticky;
+        top: 65px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
+        z-index: 2;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .aside a{
+        border: 2px solid #439fd8;
+        display: block;
+        padding: 10px 0px 3px 0px;
+        text-decoration: none;
+        color: #439fd8;
+        font-size: 16px;
+        font-weight: bold;
+        border-top:none ;
+        border-left: none;
+        border-right: none;
+        text-shadow: 2px 2px 10px white;
+        writing-mode: horizontal-tb;/*文字水平*/
+    }
+    .aside a span{
+        border-radius: 5px;
+        background-color: #0a457f;
+        padding: 0px 5px 0px 5px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: normal;
+        text-shadow: none;
+        margin: 0px auto;
+    }
+    /*右欄*/
+    .mybag_right{
+        /* border: 1px solid red; */
+        width: 95%;
+        margin: 0 auto;
+    }
+    .block{
+        /* border: 1px solid blue; */
+        display: inline-block;
+        flex: 0 1 45%;/*是否分配空位,是否伸縮，圖片比*/
+    }
+    .mybag_select1 , .mybag_select2 {
+        /* border: 1px solid green; */
+        display: block;
+        margin: 0px;
+        font-size: 14px;
+    }
+}
+
+
+

@@ -1,0 +1,1001 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+/*漢堡*/
+button.hamburger_icon{
+    display: none;
+}
+
+/*導覽列*/
+#t3{
+    /* border: 1px solid rgb(177, 95, 95); */
+    padding: 5px 15px;
+    border-radius: 5px 10px;
+    background-color: #439fd8;
+    font-size: 20px;
+    color: #ffffff;
+}
+nav.nav100{
+    background-color:hsla(180, 65%, 81%,0.9);/*#afeeee*/
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+nav.navfonticon{
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+nav.navfont{
+    /* border: 2px solid rgb(177, 95, 95); */
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+nav.navicon{
+    /* border: 2px solid palevioletred; */
+    width: 180px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+a.nav_icon{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0a457f;
+    transition: all 0.2s;
+}
+a.nav_icon:hover{
+    color: white;
+}
+a.logo_nav img{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 220px;
+    transition: all 0.2s;
+}
+a.logo_nav img:hover{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 223px;
+}
+a.user img,a.shopping img,a.lang img{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 18px;
+    transition: all 0.2s;
+}
+a.user img:hover,a.shopping img:hover,a.lang img:hover{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 22px;
+}
+
+/*preface- 前言 */
+.preface{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.preface_bgimg{
+    /* border: 1px solid purple; */
+    margin-top: 100px;
+    background-image: url(../img/aboutus_preface_bg.png);
+    background-repeat: no-repeat;
+    min-height: 400px;
+    background-attachment: fixed;/*背景自動縮放、固定*/
+    background-size: cover;
+}
+.preface_bgimg .preface_flex{
+    display: flex;
+    /* border:1px solid red; */
+    justify-content: space-around;
+    align-items: center;
+}
+.preface_flex .preface_text{
+    /* border: 1px solid blue; */
+    background-color:hsla(0,100%,100%,0.7);
+    display: inline-block;
+    box-shadow: 2px 2px 5px white;
+    position: relative;
+}
+.preface_text p{
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 30px 30px;
+    font-size: 16px;
+    color: #0a457f;
+    line-height: 40px;
+    font-weight: bold;
+    padding: 15px ;
+}
+.preface_text p::after{
+    content: "" ;
+    width: 180px;
+    height: 2px;
+    background-color: #1387cf;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.preface_text p::before{
+    content: "" ;
+    width: 2px;
+    height: 70px;
+    background-color: #1387cf;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+.preface_bgimg .preface_img{
+    /* border: 1px solid orange; */
+    width: 650px;
+}
+.preface_bgimg .preface_img > img{
+    /* border: 1px solid pink; */
+    width: 100%;
+}
+
+
+/*promise- 承諾*/
+.promise{
+    /* border:1px solid red; */
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.promise .promise_img{
+    /* border:1px solid orange; */
+    display: inline-block;
+    width: 500px;
+}
+.promise .promise_img > img{
+    /* border:1px solid orange; */
+    width: 100%;
+    vertical-align: bottom;
+}
+.promise .promise_text{
+    /* border:1px solid blue; */
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+.promise_text_center{
+    border:1px solid #1387cf;
+    padding: 50px 40px;
+}
+.promise_text_center p{
+    /* border:1px solid purple; */
+    margin: 0px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #1387cf;
+    font-weight:bold;
+}
+
+/*rule- 規則*/
+.rule{
+    /* border:1px solid red; */
+    width: 100%;
+}
+.rule .rule_bgimg{
+    /* border:1px solid orange; */
+    background-image: url(../img/aboutus_rule_bg.jpg);
+    background-repeat: no-repeat;
+    min-height: 450px;
+    background-attachment: fixed;/*背景自動縮放、固定*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rule_center .rule_text{
+    /* border:1px solid green; */
+    /* margin: 0 auto; */
+    display: inline-block;
+    background-color:hsla(0,100%,100%,0.7);
+    padding: 10px 100px;
+    box-shadow: 2px 2px 5px white;
+    position: relative;
+}
+.rule_center .rule_text::after{
+    content: "" ;
+    width: 180px;
+    height: 2px;
+    background-color: #1387cf;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.rule_center .rule_text::before{
+    content: "" ;
+    width: 2px;
+    height: 70px;
+    background-color: #1387cf;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+.rule_center .rule_text p{
+    /* border:1px solid purple; */
+    color: #0a457f;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+
+/*safe- 安全*/
+.safe{
+    background-color: #eee;
+    width: 100%;
+    margin-top: 80px;
+    padding: 60px 10px;
+}
+.safe > p{
+    /* border:1px solid orangered; */
+    font-size: 18px;
+    margin-top: 0px;
+    color: #0a457f;
+    text-align: center;
+    font-weight: bold;
+}
+.safe_allitem{
+    /* border:1px solid green; */
+    margin: 0 auto;
+    width: 1040px;
+    display: flex;
+    justify-content: space-around;
+}
+.safe_item1{
+    /* border:1px solid red; */
+    padding: 30px 15px;
+    border-radius: 10px;
+}
+.safe_item2{
+    background-color: #afeeee;
+    padding: 30px 15px;
+    border-radius: 5px;
+}
+.safe_item3{
+    /* border:1px solid red; */
+    padding: 30px 15px;
+    border-radius: 10px;
+}
+.circle{
+    background-color: #afeeee;
+    width: 200px;
+    height: 200px;
+    border-radius: 180px;
+}
+.circle2{
+    background-color: #eee;
+    width: 200px;
+    height: 200px;
+    border-radius: 180px;
+}
+.safe_img1{
+    /* border:1px solid gray; */
+    width: 80px;
+    margin: 0 auto;
+    transform: translateY(46px);
+}
+.safe_img2{
+    /* border:1px solid gray; */
+    width: 100px;
+    margin: 0 auto;
+    transform: translate(0px,55px);
+}
+.safe_img3{
+    /* border:1px solid gray; */
+    width: 90px;
+    margin: 0 auto;
+    transform: translateY(40px);
+}
+.safe_img1 > img,.safe_img2 > img,.safe_img3 > img{
+    /* border:1px solid blue; */
+    width: 100%;
+    vertical-align: bottom;
+}
+.safe_text{
+    /* border:1px solid green; */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #0a457f;
+    font-weight: bold;
+}
+.safe_text2 {
+    /* border:1px solid green; */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #0a457f;
+    font-weight: bolder;
+}
+.safe_text3 {
+    /* border:1px solid green; */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #0a457f;
+    font-weight: bolder;
+}
+
+
+/*traveler -旅客*/
+.traveler{
+    /* border:1px solid red; */
+    width: 100%;
+    margin:100px 0px 200px 0px; /*margin有-50，padding也有加*/
+}
+.traveler_bgimg{
+    /* border:1px solid orange; */
+    background-image: url(../img/aboutus_traveler_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 350px;
+}
+.traveler_text{
+    /* border: 1px solid yellow; */
+    display: inline-block;
+    opacity: 0.9;
+    display: flex;
+    padding: 22px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.text_center{
+    border:2px solid #1387cf;
+    background-color:hsla(0,100%,100%,.9);
+    margin-top: -70px;
+    margin-bottom: -70px;
+    padding: 50px 60px 50px 60px;
+    line-height: 25px;
+    font-size: 18px;
+    color: #0a457f;
+    font-weight: bold;
+}
+.text_center > p{
+    /* border: 1px solid white; */
+    padding: 20px 10px 20px 10px;
+    line-height: 30px;
+    font-size: 16px;
+    position: relative;
+}
+.text_center > p::after{
+    content: "" ;
+    width: 180px;
+    height: 2px;
+    background-color: #1387cf;
+    display: block;
+    position: absolute;
+    top: -45px;
+    left: -50px;
+}
+.text_center > p::before{
+    content: "" ;
+    width: 2px;
+    height: 70px;
+    background-color: #1387cf;
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: -40px;
+}
+.traveler_thank{
+    background-color:#ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+.traveler_thank_more{
+    /* border:1px solid gray; */
+    background-color:#ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    opacity: 1;
+}
+.thank_more{
+    /* border:1px solid green; */
+    color: #0a457f;
+    font-weight: bold;
+    font-size: 16px;
+}
+.thank_more > a{
+    display: inline-block;
+    background-color: #1387cf;
+    padding: 1px 60px 4px 60px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 19px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 1px gray;
+    font-weight: bold;
+    margin: 10px;
+    transition: all 0.2s;
+}
+.thank_more > a:hover{
+    background-color: #0a457f;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 2px black;
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    /*preface- 前言 */
+    .preface_text p{
+        padding: 0px ;
+    }
+    .preface_bgimg .preface_img{
+        /* border: 1px solid orange; */
+        width: 460px;
+    }
+    /*safe- 安全*/
+    .safe{
+        background-color: #eee;
+        max-width: 98%;
+        margin-top: 80px;
+        padding: 60px 0px;
+    }
+    .safe > p{
+        /* border:1px solid orangered; */
+        width: 99%;
+    }
+    .safe_allitem{
+        /* border:1px solid green; */
+        max-width: 100%;
+        margin: 0px !important;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    /*preface- 前言 */
+    .preface_bgimg{
+        /* border: 1px solid purple; */
+        margin-top: 0px;
+    }
+    .preface_bgimg .preface_flex{
+        flex-direction: column;
+        /* border:1px solid red; */
+        align-items: start;
+        position: relative;
+    }
+    .preface_flex .preface_text{
+        /* border: 1px solid blue; */
+        margin: 40px;
+        z-index: 1;
+    }
+    .preface_text p{
+        /* border: 1px solid green; */
+        padding: 0px;
+    }
+    .preface_bgimg .preface_img{
+        /* border: 1px solid orange; */
+        width: 350px;
+        position: absolute;
+        right: 5px;
+        top: 100px;
+    }
+    /*promise- 承諾*/
+    .promise{
+        /* border:1px solid red; */
+        margin-top: 100px;
+        width: 99%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .promise .promise_img{
+        /* border:1px solid orange; */
+        width: 370px;
+    }
+    .promise_text_center{
+        border:1px solid #1387cf;
+        padding: 50px 10px;
+    }
+    /*safe- 安全*/
+    .safe_allitem{
+        /* border:1px solid green; */
+        width: 100%;
+    }
+    /*traveler -旅客*/
+    .traveler{
+        /* border:1px solid red; */
+        width: 99%;
+        margin:100px 0px 100px 0px; /*margin有-50，padding也有加*/
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+
+    /*preface- 前言 */
+    .preface_bgimg{
+        /* border: 1px solid purple; */
+        margin-top: 0px;
+    }
+    .preface_bgimg .preface_flex{
+        flex-direction: column;
+        /* border:1px solid red; */
+        align-items: center;
+    }
+    .preface_flex .preface_text{
+        /* border: 1px solid blue; */
+        margin: 25px;
+        z-index: 1;
+    }
+    .preface_text p{
+        /* border: 1px solid green; */
+        padding: 0px;
+    }
+    .preface_bgimg .preface_img{
+        /* border: 1px solid orange; */
+        width: 350px;
+    }
+
+    /*promise- 承諾*/
+    .promise{
+        /* border:1px solid red; */
+        margin-top: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .promise .promise_img{
+        /* border:1px solid orange; */
+        width: 100%;
+        order: 1;
+    }
+    .promise_text_center{
+        border:none;
+        padding: 20px 10px;
+        order: 2;
+        position: relative;
+        top: 60px;
+        right: 60px;
+    }
+
+    /*rule- 規則*/
+    .rule{
+        /* border:1px solid red; */
+        margin-top: 50px;
+    }
+    .rule_center .rule_text{
+        /* border:1px solid green; */
+        padding: 10px 40px;
+    }
+
+    /*safe- 安全*/
+    .safe{
+        padding: 40px 10px 140px 10px;
+    }
+    .safe_allitem{
+        /* border:1px solid green; */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .safe_item1{
+        /* border:1px solid red; */
+        padding: 0px 0px;
+        position: relative;
+        text-align: center;
+        position: absolute;
+        left:3px;
+        top:100px;
+        z-index:1;
+    }
+    .safe_item2{
+        /* border:1px solid blue; */
+        background-color: #eee;
+        padding: 0px 0px;
+        position: relative;
+        text-align: center;
+    }
+    .safe_item3{
+        /* border:1px solid gray; */
+        padding: 0px 0px;
+        position: relative;
+        text-align: center;
+        position: absolute;
+        right:0px;
+        top:80px;
+    }
+    .circle2{
+        background-color: #afeeee;
+    }
+    .safe_text{
+        /* border:1px solid green; */
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+    }
+    .safe_text2 {
+        /* border:1px solid purple; */
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+    }
+    .safe_text3 {
+        /* border:1px solid red; */
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+    }
+
+    /*traveler -旅客*/
+    .traveler{
+        /* border:1px solid red; */
+        margin:100px 0px 100px 0px;
+    }
+    .traveler_text{
+        /* border: 1px solid blue; */
+        flex-direction: column;
+    }
+    .text_center{
+        border:1px solid #1387cf;
+        padding: 10px 30px 50px 30px;
+    }
+    .text_center > p{
+        /* border: 1px solid palevioletred; */
+        padding: 10px 0px 10px 0px;
+    }
+    .text_center > p::after{
+        top: -10px;
+        left: -20px;
+    }
+    .text_center > p::before{
+        top: -15px;
+        left: -10px;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 575px){
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+
+    /*preface- 前言 */
+    .preface_bgimg{
+        /* border: 1px solid purple; */
+        margin-top: 0px;
+    }
+    .preface_bgimg .preface_flex{
+        flex-direction: column;
+        /* border:1px solid red; */
+        align-items: center;
+    }
+    .preface_flex .preface_text{
+        /* border: 1px solid blue; */
+        margin: 0px;
+        z-index: 1;
+    }
+    .preface_text p{
+        /* border: 1px solid green; */
+        padding: 0px;
+        font-size: 15px;
+    }
+    .preface_bgimg .preface_img{
+        /* border: 1px solid orange; */
+        width: 350px;
+    }
+
+    /*promise- 承諾*/
+    .promise{
+        /* border:1px solid red; */
+        margin-top: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .promise .promise_img{
+        /* border:1px solid orange; */
+        width: 100%;
+        order: 1;
+    }
+    .promise_text_center{
+        border:none;
+        padding: 20px 10px;
+        order: 2;
+        position: relative;
+        top: 60px;
+        right: 10px;
+    }
+
+    /*rule- 規則*/
+    .rule{
+        /* border:1px solid red; */
+        margin-top: 50px;
+    }
+    .rule_center .rule_text{
+        /* border:1px solid green; */
+        padding: 10px 2px 5px 20px;
+    }
+    .rule_center .rule_text p{
+        /* border:1px solid purple; */
+        font-size: 15px;
+    }
+
+    /*safe- 安全*/
+    .safe{
+        padding: 40px 10px 140px 10px;
+    }
+    .safe_allitem{
+        /* border:1px solid green; */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .safe_item1{
+        /* border:1px solid red; */
+        padding: 0px 0px;
+        position: relative;
+        text-align: center;
+        position: absolute;
+        left:3px;
+        top:100px;
+        z-index:1;
+    }
+    .safe_item2{
+        /* border:1px solid blue; */
+        background-color: #eee;
+        padding: 0px 0px;
+        position: relative;
+        text-align: center;
+    }
+    .safe_item3{
+        /* border:1px solid gray; */
+        padding: 0px 0px;
+        position: relative;
+        text-align: center;
+        position: absolute;
+        right:0px;
+        top:80px;
+    }
+    .circle{
+        /* border:1px solid gray; */
+        background-color: rgba(238, 238, 238, .1);
+        width: 200px;
+        height: 200px;
+        border-radius: 180px;
+    }
+    .circle2{
+        background-color: #afeeee;
+    }
+    .safe_text{
+        /* border:1px solid green; */
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+    }
+    .safe_text2 {
+        /* border:1px solid purple; */
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+    }
+    .safe_text3 {
+        /* border:1px solid red; */
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+    }
+
+    /*traveler -旅客*/
+    .traveler{
+        /* border:1px solid red; */
+        margin:100px 0px 100px 0px;
+    }
+    .traveler_text{
+        /* border: 1px solid blue; */
+        flex-direction: column;
+    }
+    .text_center{
+        border:1px solid #1387cf;
+        padding: 10px 30px 50px 30px;
+    }
+    .text_center > p{
+        /* border: 1px solid palevioletred; */
+        padding: 10px 0px 10px 0px;
+    }
+    .text_center > p::after{
+        top: -10px;
+        left: -20px;
+    }
+    .text_center > p::before{
+        top: -15px;
+        left: -10px;
+    }
+}
+
+
+
+
+
+
+

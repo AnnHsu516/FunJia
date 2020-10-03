@@ -1,0 +1,920 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+/*漢堡*/
+button.hamburger_icon{
+    display: none;
+}
+
+/*導覽列*/
+#t1{
+    /* border: 1px solid rgb(177, 95, 95); */
+    padding: 5px 15px;
+    border-radius: 5px 10px;
+    background-color: #439fd8;
+    font-size: 20px;
+    color: #ffffff;
+}
+nav.nav100{
+    background-color:hsla(180, 65%, 81%,0.9);/*#afeeee*/
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+nav.navfonticon{
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+nav.navfont{
+    /* border: 2px solid rgb(177, 95, 95); */
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+nav.navicon{
+    /* border: 2px solid palevioletred; */
+    width: 180px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+a.nav_icon{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0a457f;
+    transition: all 0.2s;
+}
+a.nav_icon:hover{
+    color: white;
+}
+a.logo_nav img{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 220px;
+    transition: all 0.2s;
+}
+a.logo_nav img:hover{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 223px;
+}
+a.user img,a.shopping img,a.lang img{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 18px;
+    transition: all 0.2s;
+}
+a.user img:hover,a.shopping img:hover,a.lang img:hover{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 22px;
+}
+
+
+/* LightBox Style */
+/* -------- the object that calls the function  */
+.lightbox{
+    cursor: pointer;
+}
+/* -------- the LightBox  */
+#AI_lightbox{
+    /* border: 1px solid orange; */
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    z-index: 100;
+    opacity: 0;
+    display: none;
+}
+
+#AI_lightbox span{
+    /* border: 1px solid red; */
+    position: absolute;
+    cursor: pointer;
+    z-index: 110;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+#AI_lightbox span i{
+    /* border: 1px solid blue; */
+    display:none;
+}
+#AI_lightbox .close{
+    /* border: 1px solid yellow; */
+    padding: 15px;
+    top:10px;
+    right:30px;
+    background-image: url(../img/close.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+#AI_lightbox .close:hover{
+    opacity: 1;
+}
+#AI_lightbox .next{ /*右*/
+    /* border: 1px solid purple; */
+    padding: 15px;
+    top:50%;
+    right:20px;
+    transform: translate(0px, -50%);
+    background-image: url(../img/next.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+#AI_lightbox .next:hover{ /*右*/
+    opacity: 1;
+}
+#AI_lightbox .prev{ /*左*/
+    /* border: 1px solid green; */
+    padding: 15px;
+    top:50%;
+    left:15px;
+    transform: translate(0px, -50%);
+    background-image: url(../img/back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+#AI_lightbox .prev:hover{ /*左*/
+    opacity: 1;
+}
+  /* -------- the image in LightBox */
+#AI_lightbox img{
+    /* -------- If you like the edges around the picture just change a max-width and max-height to 90vw */
+    max-width: 100vw;
+    max-height: 100vh;
+    position:absolute;
+    /* -------- Set image to center */
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%);
+  }
+
+/* -------- here is just style for display preloader */
+.AI_lightbox_grid{
+    /* border: 1px solid black; */
+    margin: 30px auto;
+    width: 1140px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.AI_lightbox_grid .block{
+    /* border: 1px solid red; */
+    margin: 5px;
+    flex: 0 1 31%;/*是否分配空位,是否伸縮，圖片比*/
+    transition: all 0.2s;
+}
+.AI_lightbox_grid .block:hover{
+    border: 2px solid #439fd8;
+    margin: 5px;
+}
+.AI_lightbox_grid .block img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+
+
+
+/*title*/
+.shopping_title{
+    /* border: 1px solid purple; */
+    margin: 0 auto;
+    width: 1140px;
+}
+.title_font{
+    /* border: 1px solid red; */
+    width: 100%;
+    position: relative;
+}
+.title_font h2, .title_text h2{
+    /* border: 1px solid orangered; */
+    display: inline-block;
+    margin: 10px 0px;
+}
+.title_icon{
+    /* border: 1px solid green; */
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.title_icon a{
+    /* border: 1px solid blue; */
+    display: inline-block;
+}
+.title_icon a img{
+    /* border: 1px solid purple; */
+    width: 30px;
+    vertical-align: bottom;
+    margin: 0px 2px;
+} 
+.title_icon a:nth-child(1){
+    /* border: 1px solid blue; */
+    /* display: block; */
+    background-image: url(../img/heartsoild.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    vertical-align: bottom;
+}
+.title_icon a:nth-child(1):hover{
+    /* border: 1px solid blue; */
+    /* display: block; */
+    background-image: url(../img/heartred.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    vertical-align: bottom;
+}
+.title_span{
+    /* border: 1px solid red; */
+    padding: 5px 15px;
+    width: 100%;
+}
+.title_span span{
+    /* border: 1px solid gray; */
+    margin: 0px 10px;
+}
+.title_text p{
+    /* border: 1px solid green; */
+    padding: 0px 20px 10px 20px;
+    width: 100%;
+    margin: 0px;
+}
+.shopping_content_title{ /*點選下滑*/
+    /* border: 1px solid red; */
+    width: 1140px;
+    margin: 25px auto 5px auto;
+    padding: 5px 15px 10px 15px;
+    position: sticky;
+    top: 71px;
+    background-color: white;
+    z-index: 2;
+}
+.shopping_content_title button{
+    border: none;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin: 0 10px;
+    outline: none;
+    background-color: white;
+    font-size: 18px;
+}
+/*可能要切2欄的點*/
+.shopping_content{
+    /* border: 1px solid gray; */
+    width: 1140px;
+    margin: 0 auto;
+}
+.item1{
+    /* border: 1px solid orange; */
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 10px;
+    background-color: rgb(238, 237, 237);
+}
+.item1 h3,.item2 h3,.item3 h3,.item4 h3,.item5 h3,.item6 h3{
+    /* border: 1px solid gray; */
+    width: 100%;
+    padding-left: 10px;
+    margin: 25px 0px 10px 0px;
+}
+.item5 h3{
+    /* border: 1px solid gray; */
+    width: 100%;
+    margin: 25px 0px 10px 0px;
+    padding-left: 10px;
+    color: rgb(235, 162, 4);
+}
+.date{
+    /* border: 1px solid blue; */
+    display: inline-block;
+    margin: 0px 15px 0px 15px;
+}
+.date p{
+    /* border: 1px solid blue; */
+    display: inline-block;
+    margin: 5px 0px;
+}
+.time{
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 0px 15px 0px 0px;
+}
+.time p{
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 5px 0px;
+}
+.number{
+    /* border: 1px solid blue; */
+    display: inline-block;
+    margin: 0px 15px 0px 0px;
+}
+.number p{
+    /* border: 1px solid blue; */
+    display: inline-block;
+    margin: 5px 0px;
+}
+/*行程框*/
+.item1_text{
+    border: 1px solid gray;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+.text_f{
+    /* border: 1px solid orangered; */
+    display: inline-block;
+    margin: 5px 0px;
+    font-size: 20px;
+}
+.item1_text a:nth-child(2){
+    /* border: 1px solid orangered; */
+    text-decoration: none;
+    background-color: #439fd8;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    text-shadow: 1px 1px 1px gray;
+    box-shadow: 1px 1px 3px gray;
+}
+.item1_text a:nth-child(2):hover{
+    background-color: #0a457f;
+    text-shadow: 1px 1px 1px gray;
+    box-shadow: 1px 1px 2px gray;
+}
+.item1_text a:nth-child(3){
+    /* border: 1px solid orangered; */
+    text-decoration: none;
+    border:1px solid #439fd8;
+    padding: 2px 5px;
+    color: #439fd8;
+    border-radius: 5px;
+    position: absolute;
+    right: 85px;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px gray;
+}
+.item1_text a:nth-child(3):hover{
+    border:1px solid #0a457f;
+    color: #0a457f;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px gray;
+}
+.text_hr{
+    /* border: 1px solid green; */
+    margin: 0px;
+    font-size: 13px;
+}
+.text_nt{
+    /* border: 1px solid purple; */
+    margin: 0px;
+    text-align: end;
+    font-size: 20px;
+    color: #0a457f;
+}
+.item2,.item3,.item4{
+    /* border: 1px solid orange; */
+    width: 100%;
+    margin-bottom: 50px;
+}
+.item2 p ,.item3 p,.item4 p,.item5 p{
+    /* border: 1px solid orange; */
+    width: 100%;
+    padding: 3px 20px;
+    margin: 0;
+}
+.item5{ /*注意事項*/
+    border: 1px solid rgb(235, 162, 4);
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+/*旅客迴響*/
+.item6{
+    border: 1px solid rgb(196, 195, 195);
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.reply{
+    border: 1px solid rgb(214, 212, 212);
+    border-radius: 5px;
+    margin: 5px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.nameimg{
+    /* border: 1px solid blue; */
+    padding: 10px 20px;
+}
+.namesolid{
+    border: 1px solid #0a457f;
+    width: 50px;
+    border-radius: 80px;
+    overflow: hidden;
+    text-align: center;
+
+}
+.namesolid img{
+    /* border: 1px solid blue; */
+    width: 100%;
+    vertical-align: bottom;
+}
+.people p{
+    /* border: 1px solid blue; */
+    width: 100%;
+    margin: 10px 0px;
+}
+.people p:first-child{
+    /* border: 1px solid blue; */
+    width: 100%;
+    font-size: 18px;
+}
+.people p:last-child{
+    width: 100%;
+    color: grey;
+    font-size: 13px;
+}
+.people img{
+    /* border: 1px solid blue; */
+    width: 100px;
+    padding: 0px 10px 0px 0px;
+}
+
+/*分頁*/
+div.pagination_block{
+    /* display: inline-block; */
+    /* border:  1px solid rebeccapurple; */
+    text-align: center;
+    padding: 50px 0px 15px 0px;
+}
+div.pagination_block > ul.pagination{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+div.pagination_block > ul.pagination > li{
+    display: inline-block;
+}
+div.pagination_block > ul.pagination > li > a{
+    display: inline-block;
+    text-decoration: none;
+    border-right: 0;           
+    
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: #007bff;
+}
+
+div.pagination_block > ul.pagination > li:first-child > a{
+    display: inline-block;
+}
+  
+div.pagination_block > ul.pagination > li > a.-on{
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+  
+div.pagination_block > ul.pagination > li > a:hover{
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+/* LightBox Style */
+/* -------- here is just style for display preloader */
+.AI_lightbox_grid{
+    /* border: 1px solid black; */
+    margin: 10px auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.AI_lightbox_grid .block{
+    /* border: 1px solid red; */
+    margin: 5px;
+    flex: 0 1 31%;/*是否分配空位,是否伸縮，圖片比*/
+}
+
+/*title*/
+.shopping_title{
+    /* border: 1px solid purple; */
+    width: 100%;
+}
+.title_font{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.title_font h2, .title_text h2{
+    /* border: 1px solid orangered; */
+    padding-left: 10px;
+}
+.title_span span{
+    /* border: 1px solid gray; */
+    display:block;
+}
+.shopping_content_title{ /*點選下滑*/
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 25px auto 5px auto;
+    padding: 5px 15px 10px 15px;
+    position: sticky;
+    top: 71px;
+    background-color: white;
+    z-index: 2;
+}
+.shopping_content_title button{/*點選下滑*/
+    border: none;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin: 0 10px;
+    outline: none;
+    background-color: white;
+    font-size: 18px;
+}
+/*內容直接切完*/
+.shopping_content{
+    /* border: 1px solid gray; */
+    width: 95%;
+}
+} 
+@media screen and (min-width: 768px) and (max-width: 991px){
+/* LightBox Style */
+/* -------- here is just style for display preloader */
+.AI_lightbox_grid{
+    /* border: 1px solid black; */
+    margin: 10px auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.AI_lightbox_grid .block{
+    /* border: 1px solid red; */
+    margin: 5px;
+    flex: 0 1 30%;/*是否分配空位,是否伸縮，圖片比*/
+}
+
+/*title*/
+.shopping_title{
+    /* border: 1px solid purple; */
+    width: 100%;
+}
+.title_font{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.title_font h2, .title_text h2{
+    /* border: 1px solid orangered; */
+    padding-left: 10px;
+}
+.title_span span{
+    /* border: 1px solid gray; */
+    display:block;
+}
+.shopping_content_title{ /*點選下滑*/
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 25px auto 5px auto;
+    padding: 5px 15px 10px 15px;
+    position: sticky;
+    top: 71px;
+    background-color: white;
+    z-index: 2;
+}
+.shopping_content_title button{/*點選下滑*/
+    border: none;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin: 0 5px;
+    outline: none;
+    background-color: white;
+    font-size: 18px;
+}
+/*內容直接切完*/
+.shopping_content{
+    /* border: 1px solid gray; */
+    width: 95%;
+}
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+a.logo_nav img{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 200px;
+}
+/*hamburger*/
+button.hamburger_icon{/* 基本按鈕樣式 */
+    border: none;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    display: block;
+}
+button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+    height: 2px;
+    width: 80%;
+    background-color: #439fd8;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+    top: 25%;
+}
+button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+    top: 75%;
+}
+/* -on 的狀態 */
+button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+    transform-origin: top left;
+    top: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(45deg);
+}
+button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+    opacity: 0;
+}
+button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+    transform-origin: top left;
+    bottom: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(-45deg);
+    top: auto;
+}
+/*導覽列*/
+nav.navfonticon{
+    /* margin: 0 auto; */
+    max-width: 100%;
+    display: flex;
+    flex-direction:column;
+}
+.mobile_block{
+    display:flex;
+    width: 97%;
+    justify-content:space-between;
+    align-items: center;
+}
+nav.navfont{
+    /* border: 1px solid rgb(177, 95, 95); */
+    width: 100%;
+    display: none;
+    flex-direction:column;
+    text-align: center;
+}
+nav.navfont.on{
+    display: flex;
+}
+nav.navicon{
+    /* border: 1px solid palevioletred; */
+    display: none;
+    padding:10px;
+}
+nav.navicon.on{
+    display: flex; 
+}
+a.nav_icon{
+    /* border: 1px solid rgb(177, 95, 95); */
+    padding:5px;
+    letter-spacing: 5px;
+}
+
+/* LightBox Style */
+/* -------- here is just style for display preloader */
+.AI_lightbox_grid{
+    /* border: 1px solid black; */
+    margin: 10px auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.AI_lightbox_grid .block{
+    /* border: 1px solid red; */
+    margin: 5px;
+    flex: 0 1 30%;/*是否分配空位,是否伸縮，圖片比*/
+}
+
+/*title*/
+.shopping_title{
+    /* border: 1px solid purple; */
+    width: 100%;
+}
+.title_font{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.title_font h2, .title_text h2{
+    /* border: 1px solid orangered; */
+    padding-left: 10px;
+}
+.title_span span{
+    /* border: 1px solid gray; */
+    display:block;
+}
+.shopping_content_title{ /*點選下滑*/
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 25px auto 5px auto;
+    padding: 5px 3px 10px 3px;
+    position: sticky;
+    top: 65px;
+    background-color: white;
+    z-index: 2;
+}
+.shopping_content_title button{/*點選下滑*/
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    padding: 2px 4px;
+    margin: 0 3px;
+    outline: none;
+    background-color: white;
+    font-size: 16px;
+}
+/*內容直接切完*/
+.shopping_content{
+    /* border: 1px solid gray; */
+    width: 95%;
+}
+.number{
+    /* border: 1px solid blue; */
+    display: block;
+    padding-left: 15px;
+    width: 100%;
+}
+}
+@media screen and (max-width: 575px){
+a.logo_nav img{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 200px;
+}
+/*hamburger*/
+button.hamburger_icon{/* 基本按鈕樣式 */
+    border: none;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    display: block;
+}
+button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+    height: 2px;
+    width: 80%;
+    background-color: #439fd8;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+    top: 25%;
+}
+button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+    top: 75%;
+}
+/* -on 的狀態 */
+button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+    transform-origin: top left;
+    top: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(45deg);
+}
+button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+    opacity: 0;
+}
+button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+    transform-origin: top left;
+    bottom: 5px;
+    left: 6px;
+    width: 102%;
+    transform: rotate(-45deg);
+    top: auto;
+}
+/*導覽列*/
+nav.navfonticon{
+    /* margin: 0 auto; */
+    max-width: 100%;
+    display: flex;
+    flex-direction:column;
+}
+.mobile_block{
+    display:flex;
+    width: 97%;
+    justify-content:space-between;
+    align-items: center;
+}
+nav.navfont{
+    /* border: 1px solid rgb(177, 95, 95); */
+    width: 100%;
+    display: none;
+    flex-direction:column;
+    text-align: center;
+}
+nav.navfont.on{
+    display: flex;
+}
+nav.navicon{
+    /* border: 1px solid palevioletred; */
+    display: none;
+    padding:10px;
+}
+nav.navicon.on{
+    display: flex; 
+}
+a.nav_icon{
+    /* border: 1px solid rgb(177, 95, 95); */
+    padding:5px;
+    letter-spacing: 5px;
+}
+
+/* LightBox Style */
+/* -------- here is just style for display preloader */
+.AI_lightbox_grid{
+    /* border: 1px solid black; */
+    margin: 10px auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.AI_lightbox_grid .block{
+    /* border: 1px solid red; */
+    margin: 5px;
+    flex: 0 1 30%;/*是否分配空位,是否伸縮，圖片比*/
+}
+
+/*title*/
+.shopping_title{
+    /* border: 1px solid purple; */
+    width: 100%;
+}
+.title_font{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.title_font h2, .title_text h2{
+    /* border: 1px solid orangered; */
+    padding-left: 10px;
+}
+.title_span span{
+    /* border: 1px solid gray; */
+    display:block;
+}
+.shopping_content_title{ /*點選下滑*/
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 25px auto 5px auto;
+    padding: 5px 2px 10px 2px;
+    position: sticky;
+    top: 65px;
+    background-color: white;
+    z-index: 2;
+}
+.shopping_content_title button{/*點選下滑*/
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    padding: 2px 4px;
+    margin: 0px;
+    outline: none;
+    background-color: white;
+    font-size: 12px;
+}
+/*內容直接切完*/
+.shopping_content{
+    /* border: 1px solid gray; */
+    width: 95%;
+}
+.number{
+    /* border: 1px solid blue; */
+    display: block;
+    padding-left: 15px;
+    width: 100%;
+}
+}

@@ -1,0 +1,485 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+/*漢堡*/
+button.hamburger_icon{
+    display: none;
+}
+/*導覽列*/
+nav.nav100{
+    background-color:hsla(180, 65%, 81%,0.9);/*#afeeee*/
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+nav.navfonticon{
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+nav.navfont{
+    /* border: 2px solid rgb(177, 95, 95); */
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+nav.navicon{
+    /* border: 2px solid palevioletred; */
+    width: 180px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+a.nav_icon{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0a457f;
+    transition: all 0.2s;
+}
+a.nav_icon:hover{
+    color: white;
+}
+a.logo_nav img{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 220px;
+    transition: all 0.2s;
+}
+a.logo_nav img:hover{ /*導覽列logo大小*/
+    /* border: 1px solid green; */
+    width: 223px;
+}
+a.user img,a.shopping img,a.lang img{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 18px;
+    transition: all 0.2s;
+}
+a.user img:hover,a.shopping img:hover,a.lang img:hover{ /*導覽列icon大小*/
+    /* border: 1px solid palevioletred; */
+    width: 22px;
+}
+
+/* 內容 */
+.main{
+    width: 100%;
+    /* background-color: #d8d9da; */
+}
+.signin_table{
+    /* border: 1px solid blue; */
+    margin: 80px auto 80px auto;
+}
+
+.td1_1,.td2_1,.td4_1,.td5_1{ 
+    padding: 20px;
+    background-color: #eee;
+}
+.td3_2{
+    padding: 10px;
+    background-color: #eee;
+}
+.td3_3{
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+}
+.slogan p{
+    /* border: 1px solid gray;  */
+    padding: 40px 60px 0px 60px;
+    color:#0a457f;
+    font-size: 4vw;
+    margin: 0;
+}
+.td1_2 , .td1_3 , .td2_2 , .td3_1 , .td4_2 , .td4_3 , .td5_2{
+    border: 1px solid white; 
+    background-color: #eee;
+}
+
+
+
+/*sign in*/
+.sign_in{
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px;
+}
+.logo{ /*td3-3*/
+    /* border: 1px solid orangered; */
+    width: 250px;
+    margin: 50px auto 0px auto;
+}
+.logo img{ /*td3-3*/
+    /* border: 1px solid orangered; */
+    width: 100%; 
+    vertical-align: bottom;
+}
+h4{
+    /* border: 1px solid gray; */
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0px;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.sign_in_icon{
+    /* border: 1px solid green; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.line{
+    background-color: #00c300;
+    margin-right: 10px;
+    width: 120px;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #00c300;
+    outline: none;
+    box-shadow: 1px 1px 3px gray;
+    transition: all 0.2s;
+}
+.line:hover{
+    background-color: white;
+    border: 1px solid #00c300;
+    color: #00c300;
+    font-weight: bold;
+}
+.fb{
+    background-color: #3b5998;
+    width: 120px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #3b5998;
+    outline: none;
+    box-shadow: 1px 1px 3px gray;
+    transition: all 0.2s;
+}
+.fb:hover{
+    background-color: white;
+    border: 1px solid #3b5998;
+    color: #3b5998;
+    font-weight: bold;
+}
+.p1{
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 0px;
+    padding: 0px 10px;
+    position: relative;
+    left: 160px;
+    top: 20px;
+    background-color: #eee;
+    color: #0a457f;
+}
+.userpsd{
+    /* border: 1px solid gray; */
+    display: flex;
+    justify-content: center;
+}
+.upfont{
+    /* border: 1px solid blue; */
+    text-align: left;
+}
+.upfont > p{
+    /* border: 1px solid green; */
+    margin: 10px 0px;
+    text-align: end;
+    color: #0a457f;
+}
+.upsoild > p{
+    /* border: 1px solid rebeccapurple; */
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+}
+.upsoildflex input{
+    margin: 10px 0px;
+}
+.upsoildflex input{
+    margin: 10px 0px 0px 0px;
+}
+.af{
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: end;
+    padding: 0px 40px 15px 0px;
+    color: #0a457f;
+}
+.signbutton{
+    text-align: center;
+}
+.enter1{ 
+    background-color: #439fd8;
+    padding: 7px 80px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 3px gray;
+    transition: all 0.2s;
+}
+.enter1:hover{ 
+    background-color: #0a457f;
+    padding: 7px 80px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 3px black;
+}
+.now{
+    text-align: center;
+}
+.now p{
+    margin: 20px 0px 2px 0px;
+    font-size: 13px;
+    color: #0a457f;
+}
+.enter2{ 
+    background-color: #afeeee;
+    padding: 7px 80px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #afeeee;
+    color: #0a457f;
+    font-size: 18px;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 3px gray;
+    transition: all 0.2s;
+}
+.enter2:hover{ 
+    background-color: white;
+    border: 1px solid #afeeee;
+    color: #439fd8;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+    body{
+        margin: 0;
+        background: #eee;
+    }
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+    /*內容*/
+    .signin_table{
+        width: 100%;
+    }
+    .td1_1,.td2_1,.td4_1,.td5_1{ 
+        display: none;
+    }
+    .td3_3{ /*鯨魚*/
+        display: none;
+    }
+    .td1_2 , .td1_3 , .td2_2 , .td3_1 , .td4_2 , .td4_3 , .td5_2{
+        display: none;
+    }
+}
+@media screen and (max-width: 575px){
+    body{
+        margin: 0;
+        background: #eee;
+    }
+    a.logo_nav img{ /*導覽列logo大小*/
+        /* border: 1px solid green; */
+        width: 200px;
+    }
+    /*hamburger*/
+    button.hamburger_icon{/* 基本按鈕樣式 */
+        border: none;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        display: block;
+    }
+    button.hamburger_icon span.-hr{/* 每一條橫線的樣式 */
+        height: 2px;
+        width: 80%;
+        background-color: #439fd8;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    button.hamburger_icon span.-hr.-top{/* 最上面那條線的樣式 */
+        top: 25%;
+    }
+    button.hamburger_icon span.-hr.-bottom{/* 最下面那條線的樣式 */
+        top: 75%;
+    }
+    /* -on 的狀態 */
+    button.hamburger_icon.-on span.-hr.-top{/* 上方的線 */
+        transform-origin: top left;
+        top: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(45deg);
+    }
+    button.hamburger_icon.-on span.-hr.-middle{/* 中間的線 */
+        opacity: 0;
+    }
+    button.hamburger_icon.-on span.-hr.-bottom{/* 下方的線 */
+        transform-origin: top left;
+        bottom: 5px;
+        left: 6px;
+        width: 102%;
+        transform: rotate(-45deg);
+        top: auto;
+    }
+    /*導覽列*/
+    nav.navfonticon{
+        /* margin: 0 auto; */
+        max-width: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .mobile_block{
+        display:flex;
+        width: 97%;
+        justify-content:space-between;
+        align-items: center;
+    }
+    nav.navfont{
+        /* border: 1px solid rgb(177, 95, 95); */
+        width: 100%;
+        display: none;
+        flex-direction:column;
+        text-align: center;
+    }
+    nav.navfont.on{
+        display: flex;
+    }
+    nav.navicon{
+        /* border: 1px solid palevioletred; */
+        display: none;
+        padding:10px;
+    }
+    nav.navicon.on{
+        display: flex; 
+    }
+    a.nav_icon{
+        /* border: 1px solid rgb(177, 95, 95); */
+        padding:5px;
+        letter-spacing: 5px;
+    }
+    /*內容*/
+    .signin_table{
+        width: 100%;
+    }
+    .td1_1,.td2_1,.td4_1,.td5_1{ 
+        display: none;
+    }
+    .td3_3{ /*鯨魚*/
+        display: none;
+    }
+    .td1_2 , .td1_3 , .td2_2 , .td3_1 , .td4_2 , .td4_3 , .td5_2{
+        display: none;
+    }
+}

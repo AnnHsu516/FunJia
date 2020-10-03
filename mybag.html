@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunJia 我的背包</title>
+    <link rel="stylesheet" href="./css/mybag.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="shortcut icon" href="./img/funjiaico.ico">
+    <link rel="stylesheet" href="./css/font.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div class="header">
+    </div>
+<!--導覽列-->
+<nav class="nav100">
+    <nav class="navfonticon">
+        <div class="mobile_block">
+            <a href="./index.html" class="logo_nav">
+                <img src="./img/logo_nav.png">
+            </a>
+            <button type="button" class="hamburger_icon">
+                <span class="-hr -top"></span>
+                <span class="-hr -middle"></span>
+                <span class="-hr -bottom"></span>
+            </button>
+        </div>
+        <nav class="navfont">
+            <a href="./product.html" class="nav_icon" id="t1">行程選擇</a>
+            <a href="./faqs.html" class="nav_icon" id="t2">聯繫我們</a>
+            <a href="./about_us.html" class="nav_icon" id="t3">關於我們</a>
+            <a href="./mybag.html" class="nav_icon" id="t4">我的背包</a>
+        </nav>
+        <nav class="navicon">          
+            <a href="./sign_in.html" class="user">
+                <img src="./img/user_nav.png">
+            </a>
+
+            <a href="./pay.html" class="shopping">
+                <img src="./img/shopping_nav.png">
+            </a>
+
+            <a href="#" class="lang">
+                <img src="./img/global_nav.png">
+            </a>
+        </nav>
+    </nav>
+</nav>
+
+
+    <div class="main">
+        <!--全欄-->
+        <div class="all_flex">
+            <!--左欄100px-->
+            <div class="aside">
+                <a href="./pay.html">購物車</a>
+                <a href="#"><span>相片下載</span></a>
+                <a href="#">購買紀錄</a>
+                <a href="#">我的資料</a>
+            </div>
+            <!--右欄-->
+                <div class="mybag_right" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000"><!--背包-->
+                    <p class="p1">相片下載</p>
+
+                    <div class="mybag_select">
+                        
+                        <div class="mybag_select1">
+                            <p>依日期區間尋找</p>
+                            <select name="stime">
+                                <option value="1">近一年購買行程</option>
+                                <option value="2">近半年購買行程</option>
+                                <option value="3">近三個月購買行程</option>
+                            </select>
+                        </div>
+
+                        <div class="mybag_select2">
+                            <p class="p3">依活動行程尋找</p>
+                            <select name="stime">
+                                <option value="1">SUP</option>
+                                <option value="2">獨木舟</option>
+                                <option value="3">衝浪</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="p2">行程相簿</p>
+                    <div class="mybag_list">
+                        <div class="op_top"><!--頭-->
+                            <span>日期：2020/06/06</span>
+                            <span>狀態：已使用完畢</span>
+                            <span>訂單編號：0061585</span>
+                            <button class="show">查看相片</button>
+                            <p>活動名稱：SUP立槳最美海岸線</p>
+                            <span>共 300 張照片</span>
+                        </div>
+                        <div class="op_don"><!--內容-->
+                            <div class="btn_dload">
+                                <a class="dload" href="./20200606 SUP立槳最美海岸線.zip" download="SUP立槳最美海岸線20200606.zip">下 載</a>
+                                <a class="alldload" href="./20200606 SUP立槳最美海岸線.zip" download="SUP立槳最美海岸線20200606(所有照片).zip">全部下載</a>
+                            </div>
+                            <section class="AI_lightbox_grid">
+                                <div class="block">
+                                    <input class="ipt" type="checkbox" name="photo"><img class="lightbox" src="./img/mybag_1.jpg" >
+                                </div>
+                                <div class="block">
+                                    <input class="ipt" type="checkbox" name="photo"><img class="lightbox" src="./img/mybag_2.jpg" >
+                                </div>
+                                <div class="block">
+                                    <input class="ipt" type="checkbox" name="photo"><img class="lightbox" src="./img/mybag_3.jpg" >
+                                </div>
+                                <div class="block">
+                                    <input class="ipt" type="checkbox" name="photo"><img class="lightbox" src="./img/mybag_4.jpg" >
+                                </div>
+                                <div class="block">
+                                    <input class="ipt" type="checkbox" name="photo"><img class="lightbox" src="./img/mybag_5.jpg" >
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="op_top"><!--頭-->
+                            <span>日期：2020/06/06</span>
+                            <span>狀態：已使用完畢</span>
+                            <span>訂單編號：0061585</span>
+                            <button class="show2">查看相片</button>
+                            <p>活動名稱：SUP立槳最美海岸線</p>
+                            <span>共 300 張照片</span>
+                        </div>
+
+                        <div class="op_top"><!--頭-->
+                            <span>日期：2020/06/06</span>
+                            <span>狀態：已使用完畢</span>
+                            <span>訂單編號：0061585</span>
+                            <button class="show2">查看相片</button>
+                            <p>活動名稱：SUP立槳最美海岸線</p>
+                            <span>共 300 張照片</span>
+                        </div>
+
+                        <div class="op_top"><!--頭-->
+                            <span>日期：2020/06/06</span>
+                            <span>狀態：已使用完畢</span>
+                            <span>訂單編號：0061585</span>
+                            <button class="show2">查看相片</button>
+                            <p>活動名稱：SUP立槳最美海岸線</p>
+                            <span>共 300 張照片</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+<!--footer-->
+    <footer class="footer">
+        <!--4個icon(聯絡資訊) + 安心、專業、熱忱三個icon-->
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+                <div class="slide"><img src="./img/wave_footer.png"/></div>
+            </div>
+        </div>
+        <div class="bgimg_footer">
+            <div class="icon_footer"><!--這裡是flex-->
+                <div class="phone_mail">
+                    <div class="phone_footer">
+                        <img src="./img/phone_footer.png">
+                        <span>(03)1235678</span>
+                    </div>
+                    <div class="email_footer">
+                        <img src="./img/email_footer.png">
+                        <span>123@gmail.com</span>
+                    </div>
+                    <div class="rudder_footer">
+                        <img src="./img/rudder_footer.png">
+                        <span>桃園市平鎮區中央路300號</span>
+                    </div>
+                </div>
+
+                <div class="fb_ig">
+                <div class="logo_footer"><img src="./img/logo_nofont.png"></div>
+                <div class="fb_footer"><img src="./img/fb_footer.png"></div>
+                <div class="ig_footer"><img src="./img/ig_footer.png"></div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <img class="cloud" src="./img/cloud.png">
+    <img class="shan" src="./img/shan.png">
+    <script src="./vendors/jquery.js"></script>
+    <script src="./js/mybag.js"></script>
+    <script src="./js/hanburger.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
